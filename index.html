@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko" data-lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>김준성 | Junsung Kim — 정책학·직업훈련·공공기관 연구</title>
+<meta name="description" content="김준성 — 한국직업능력연구원 부연구위원. 직업훈련, 공공기관 HRD·거버넌스, 지역개발, 정책평가 연구.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F6F3;
+  --panel:#E9EDE8;
+  --ink:#1D2B32;
+  --ink-2:#4B5A61;
+  --muted:#7C8A90;
+  --rule:#CFD7D3;
+  --accent:#0F5F66;
+  --accent-soft:#D6E7E6;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#141B1E; --panel:#1B2428; --ink:#E6ECEA; --ink-2:#B9C4C4;
+    --muted:#8A979B; --rule:#2C383C; --accent:#6CC1C4; --accent-soft:#1C3538;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141B1E; --panel:#1B2428; --ink:#E6ECEA; --ink-2:#B9C4C4;
+  --muted:#8A979B; --rule:#2C383C; --accent:#6CC1C4; --accent-soft:#1C3538;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"IBM Plex Sans KR","Pretendard","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  font-size:16px; line-height:1.75; -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent); text-decoration:none; border-bottom:1px solid transparent}
+a:hover, a:focus-visible{border-bottom-color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+h1,h2,h3{font-family:"Noto Serif KR","Nanum Myeongjo",Georgia,serif; font-weight:700; margin:0; letter-spacing:-.01em}
+
+/* language toggle: hide the inactive language */
+[data-lang="ko"] [lang="en"]{display:none}
+[data-lang="en"] [lang="ko"]{display:none}
+
+.wrap{max-width:1120px; margin:0 auto; padding:0 24px}
+.layout{display:grid; grid-template-columns:300px minmax(0,1fr); gap:72px; align-items:start; padding:64px 0 96px}
+@media (max-width:860px){ .layout{grid-template-columns:1fr; gap:40px; padding:40px 0 72px} }
+
+/* sidebar */
+.side{position:sticky; top:32px}
+@media (max-width:860px){ .side{position:static} }
+.name-ko{font-size:40px; line-height:1.15}
+.name-en{font-size:18px; color:var(--ink-2); margin-top:6px; font-family:"IBM Plex Sans KR",sans-serif; font-weight:500}
+.role{margin:20px 0 0; color:var(--ink-2); font-size:15px; line-height:1.6}
+.role strong{color:var(--ink); font-weight:600}
+.photo{ width:100%; aspect-ratio:4/5; overflow:hidden; margin:28px 0 0; border:1px solid var(--rule); }
+@media (max-width:860px){ .photo{max-width:220px; aspect-ratio:1} }
+.links{list-style:none; padding:0; margin:28px 0 0; font-size:15px}
+.links li{padding:9px 0; border-top:1px solid var(--rule); display:flex; justify-content:space-between; gap:12px}
+.links li:last-child{border-bottom:1px solid var(--rule)}
+.links span{color:var(--muted)}
+.lang{margin-top:28px; display:inline-flex; border:1px solid var(--rule); border-radius:999px; overflow:hidden}
+.lang button{
+  appearance:none; border:0; background:transparent; color:var(--ink-2); padding:6px 14px; font:inherit; font-size:13px; cursor:pointer;
+}
+.lang button[aria-pressed="true"]{background:var(--accent); color:#fff}
+:root[data-theme="dark"] .lang button[aria-pressed="true"], :root:not([data-theme="light"]) .lang button[aria-pressed="true"]{color:var(--paper)}
+
+/* main */
+.main > section{padding:0 0 56px; margin:0 0 56px; border-bottom:1px solid var(--rule)}
+.main > section:last-child{border-bottom:0; margin-bottom:0}
+.main h2{font-size:26px; margin-bottom:22px}
+.lede{font-size:19px; line-height:1.7; color:var(--ink); max-width:62ch; font-family:"Noto Serif KR",serif; font-weight:500}
+.lede + p{margin-top:18px}
+.main p{max-width:68ch; margin:0 0 14px; color:var(--ink-2)}
+.keywords{display:flex; flex-wrap:wrap; gap:8px; margin:22px 0 0; padding:0; list-style:none}
+.keywords li{background:var(--accent-soft); color:var(--accent); padding:4px 12px; border-radius:4px; font-size:14px; font-weight:500}
+
+/* timeline-style lists (education/career actually are sequences) */
+.timeline{list-style:none; margin:0; padding:0}
+.timeline li{display:grid; grid-template-columns:110px 1fr; gap:18px; padding:12px 0; border-top:1px solid var(--rule)}
+.timeline li:last-child{border-bottom:1px solid var(--rule)}
+.timeline time{color:var(--muted); font-size:14px; font-variant-numeric:tabular-nums; padding-top:2px}
+.timeline b{font-weight:600; color:var(--ink)}
+.timeline small{display:block; color:var(--ink-2); font-size:14px}
+@media (max-width:520px){ .timeline li{grid-template-columns:1fr; gap:2px} }
+
+/* publications */
+.pub-group{margin:0 0 30px}
+.pub-group h3{font-size:16px; font-weight:600; font-family:"IBM Plex Sans KR",sans-serif; color:var(--ink-2); margin:0 0 10px}
+.pubs{list-style:none; margin:0; padding:0}
+.pubs li{padding:14px 0 14px 18px; border-top:1px solid var(--rule); position:relative; max-width:72ch}
+.pubs li::before{content:""; position:absolute; left:0; top:22px; width:6px; height:6px; border-radius:50%; background:var(--accent)}
+.pubs li:last-child{border-bottom:1px solid var(--rule)}
+.pubs .t{font-weight:600; color:var(--ink)}
+.pubs .m{display:block; color:var(--ink-2); font-size:15px}
+.pubs .s{display:inline-block; margin-top:4px; font-size:13px; color:var(--accent); background:var(--accent-soft); padding:1px 8px; border-radius:3px}
+.todo{color:#9A5B12; background:#FBEBD3; font-size:13px; padding:1px 7px; border-radius:3px}
+:root[data-theme="dark"] .todo, :root:not([data-theme="light"]) .todo{color:#F1C27A; background:#3A2C14}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]) .todo{color:#9A5B12; background:#FBEBD3} }
+
+footer{padding:24px 0 48px; color:var(--muted); font-size:13px; border-top:1px solid var(--rule)}
+footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<div class="layout">
+
+  <aside class="side">
+    <h1 class="name-ko"><span lang="ko">김준성</span><span lang="en">Junsung Kim</span></h1>
+    <div class="name-en"><span lang="ko">Junsung Kim, Ph.D.</span><span lang="en">김준성 · Ph.D.</span></div>
+
+    <p class="role">
+      <span lang="ko"><strong>부연구위원</strong><br>한국직업능력연구원(KRIVET)<br>지역·산업HRD연구센터</span>
+      <span lang="en"><strong>Associate Research Fellow</strong><br>Korea Research Institute for Vocational Education &amp; Training (KRIVET)<br>Regional &amp; Industrial HRD Research Center</span>
+    </p>
+
+    <div class="photo"><img src="photo.jpg" alt="김준성 Junsung Kim" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.parentNode.style.display='none'"></div>
+
+    <ul class="links">
+      <li><span>Email</span><a href="mailto:example@krivet.re.kr">example@krivet.re.kr</a></li>
+      <li><span>ORCID</span><a href="https://orcid.org/0009-0004-7987-4604" rel="me">0009-0004-7987-4604</a></li>
+      <li><span>Google Scholar</span><a href="https://scholar.google.com/citations?user=9jx3_XUAAAAJ" rel="me"><span lang="ko">프로필 보기</span><span lang="en">view profile</span></a></li>
+      <li><span>KRIVET</span><a href="https://www.krivet.re.kr" rel="noopener">krivet.re.kr</a></li>
+    </ul>
+
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set-lang="ko" aria-pressed="true">한국어</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">English</button>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <section id="about">
+      <p class="lede">
+        <span lang="ko">직업훈련과 공공기관, 지역개발 정책이 실제로 어떤 효과를 내는지를 실증적으로 평가하는 정책학 연구자입니다.</span>
+        <span lang="en">A policy scholar studying how vocational training, public-institution, and regional development policies actually perform, using empirical program evaluation.</span>
+      </p>
+      <p>
+        <span lang="ko">한국직업능력연구원 지역·산업HRD연구센터에서 실업자 직업훈련 성과평가, 스킬 단위의 노동시장 분석, 산업별인적자원개발위원회(ISC) 등 국가 직업능력개발 정책 연구를 수행하고 있습니다. 2015년부터 약 10년간 한국조세재정연구원에서 공공기관 관리 연구를 수행하였고, 서울대학교 행정대학원에서 공공기관 지방이전(혁신도시) 정책을 주제로 정책학 박사학위를 받았습니다. 스킬 단위 분석, 지역고용과 지역개발, 공공부문 관리, ESG 경영, 정책실험에 관심이 있으며, 학교에서 배운 패널 분석, 델파이 기법·AHP(계층분석법)·텍스트마이닝, Local LLM 활용 연구 등 다양한 방법론을 업무 수행에 적용하는 혼합방법으로 연구하고 있습니다.</span>
+        <span lang="en">At KRIVET's Regional &amp; Industrial HRD Research Center, I conduct research on national vocational competency development policy, including performance evaluation of training for the unemployed, skill-level labor market analysis, and Industry Skills Councils (ISCs). Before joining KRIVET, I spent about a decade from 2015 at the Korea Institute of Public Finance researching the management of public institutions, and I earned a Ph.D. in policy studies from Seoul National University's Graduate School of Public Administration with a dissertation on public-institution relocation and Innovation City policy. My interests span skill-level analysis, regional employment and development, public sector management, ESG management, and policy experimentation. I work with mixed methods, applying panel analysis, Delphi, AHP, text mining, and local LLM-based approaches to practical policy research.</span>
+      </p>
+      <ul class="keywords">
+        <li><span lang="ko">스킬 단위 분석</span><span lang="en">Skill-level analysis</span></li>
+        <li><span lang="ko">지역고용·지역개발</span><span lang="en">Regional employment &amp; development</span></li>
+        <li><span lang="ko">공공부문 관리</span><span lang="en">Public sector management</span></li>
+        <li><span lang="ko">ESG 경영</span><span lang="en">ESG management</span></li>
+        <li><span lang="ko">정책실험·정책평가</span><span lang="en">Policy experimentation &amp; evaluation</span></li>
+      </ul>
+    </section>
+
+    <section id="cv">
+      <h2><span lang="ko">경력</span><span lang="en">Appointments</span></h2>
+      <ul class="timeline">
+        <li><time>2025.4 –</time>
+          <div><b><span lang="ko">부연구위원, 한국직업능력연구원 지역·산업HRD연구센터</span><span lang="en">Associate Research Fellow, Regional &amp; Industrial HRD Research Center, KRIVET</span></b>
+          <small><span lang="ko">인적자원개발 · 세종</span><span lang="en">Human resource development · Sejong, Korea</span></small></div></li>
+        <li><time>2015.12 – 2025.4</time>
+          <div><b><span lang="ko">선임연구원, 한국조세재정연구원</span><span lang="en">Senior Researcher, Korea Institute of Public Finance (KIPF)</span></b>
+          <small><span lang="ko">공공기관 성과관리</span><span lang="en">Performance management of public institutions</span></small></div></li>
+        <li><time>2011 – 2012</time>
+          <div><b><span lang="ko">현대카드·현대캐피탈</span><span lang="en">Hyundai Card / Hyundai Capital</span></b></div></li>
+      </ul>
+
+      <h2 style="margin-top:44px"><span lang="ko">학력</span><span lang="en">Education</span></h2>
+      <ul class="timeline">
+        <li><time>2019 – 2024</time>
+          <div><b><span lang="ko">행정학 박사(정책학 전공), 서울대학교 행정대학원</span><span lang="en">Ph.D. in Public Administration (Policy Studies), Graduate School of Public Administration, Seoul National University</span></b>
+          <small><span lang="ko">학위논문: 「공공기관 지방이전 및 혁신도시 개발 정책이 지역 발전에 미치는 영향」 (2024)</span><span lang="en">Dissertation: <em>The effects of public-institution relocation and Innovation City development policy on regional development</em> (2024)</span></small></div></li>
+        <li><time>2013 – 2015</time>
+          <div><b><span lang="ko">행정학 석사(정책학 전공), 서울대학교 행정대학원</span><span lang="en">M.P.A. (Policy Studies), Graduate School of Public Administration, Seoul National University</span></b></div></li>
+        <li><time>2003 – 2010</time>
+          <div><b><span lang="ko">농경제사회학 학사, 서울대학교</span><span lang="en">B.A. in Agricultural Economics and Rural Sociology, Seoul National University</span></b></div></li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2><span lang="ko">논문</span><span lang="en">Publications</span></h2>
+      <p style="font-size:14px"><span lang="ko">전체 목록과 인용 현황은 <a href="https://scholar.google.com/citations?user=9jx3_XUAAAAJ">Google Scholar</a>와 <a href="https://orcid.org/0009-0004-7987-4604">ORCID</a>에서 확인할 수 있습니다.</span><span lang="en">Full list and citation counts on <a href="https://scholar.google.com/citations?user=9jx3_XUAAAAJ">Google Scholar</a> and <a href="https://orcid.org/0009-0004-7987-4604">ORCID</a>. Korean-language articles are listed with translated titles.</span></p>
+
+      <div class="pub-group">
+        <h3><span lang="ko">국제학술지</span><span lang="en">International journal articles</span></h3>
+        <ul class="pubs">
+          <li>
+            <span class="t">A gender analysis of vertical wage gap and employee turnover of public organizations in South Korea</span>
+            <span class="m"><span lang="ko">김준성, 이주경 · <em>Public Administration and Policy</em> (Emerald), 2026, 게재확정</span><span lang="en">Kim, J., &amp; Lee, J. · <em>Public Administration and Policy</em> (Emerald), 2026, accepted</span></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pub-group">
+        <h3><span lang="ko">국내학술지</span><span lang="en">Korean journal articles</span></h3>
+        <ul class="pubs">
+          <li><span class="t"><span lang="ko">공공기관 유연근무제 활용에 관한 연구: 지방 이전 공공기관을 중심으로</span><span lang="en">Flexible work arrangements in public institutions: Focusing on relocated public institutions</span></span>
+            <span class="m"><span lang="ko">이주경, 김준성 · <em>한국사회와 행정연구</em>, 36(2), 95–115 · 2025</span><span lang="en">Lee, J., &amp; Kim, J. · <em>Korean Society and Public Administration</em> (한국사회와 행정연구), 36(2), 95–115 · 2025 [in Korean]</span></span></li>
+          <li><span class="t"><span lang="ko">중앙과 지방 공공기관의 ESG 경영 공시 제도 비교연구</span><span lang="en">A comparative study of ESG disclosure systems for central and local public institutions</span></span>
+            <span class="m"><span lang="ko">김준성, 이주경, 송경호, 정예슬 · <em>공공기관과 정책연구</em>, 2(2), 199–230 · 2024</span><span lang="en">Kim, J., Lee, J., Song, K., &amp; Jung, Y. · <em>Journal of Public Institutions and Policy</em> (공공기관과 정책연구), 2(2), 199–230 · 2024 [in Korean]</span></span></li>
+          <li><span class="t"><span lang="ko">공무원의 공공봉사동기가 조직몰입에 미치는 영향: 채용유형에 따른 목표모호성, 역할모호성의 조절효과를 중심으로</span><span lang="en">Public service motivation and organizational commitment among civil servants: The moderating roles of goal and role ambiguity by recruitment type</span></span>
+            <span class="m"><span lang="ko">유승현, 김준성 · <em>한국조직학회보</em>, 20(2), 79–120 · 2023</span><span lang="en">Yoo, S., &amp; Kim, J. · <em>Korean Review of Organizational Studies</em> (한국조직학회보), 20(2), 79–120 · 2023 [in Korean]</span></span></li>
+          <li><span class="t"><span lang="ko">공공기관 종사자의 임금제도 수용성: 연령별·성별 인식 차이를 중심으로</span><span lang="en">Acceptance of wage systems among public institution employees: Differences in perception by age and gender</span></span>
+            <span class="m"><span lang="ko">한동숙, 김준성 · <em>한국인사행정학회보</em>, 22(3), 31–59 · 2023</span><span lang="en">Han, D., &amp; Kim, J. · <em>Korean Public Personnel Administration Review</em> (한국인사행정학회보), 22(3), 31–59 · 2023 [in Korean]</span></span></li>
+          <li><span class="t"><span lang="ko">부패와 기업가 활동의 관계에 관한 연구: 지역의 산업을 중심으로</span><span lang="en">Corruption and entrepreneurial activity: A regional industry perspective</span></span>
+            <span class="m"><span lang="ko">김준성, 유승현 · <em>한국부패학회보</em>, 28(1), 101–122 · 2023</span><span lang="en">Kim, J., &amp; Yoo, S. · <em>Korean Corruption Studies Review</em> (한국부패학회보), 28(1), 101–122 · 2023 [in Korean]</span></span></li>
+          <li><span class="t"><span lang="ko">공공기관 지방 이전과 혁신도시 조성의 경제적 성과에 관한 연구</span><span lang="en">Economic outcomes of public-institution relocation and Innovation City development</span></span>
+            <span class="m"><span lang="ko">김준성 · <em>지방정부연구</em>, 26(2), 119–145 · 2022</span><span lang="en">Kim, J. · <em>Journal of Local Government Studies</em> (지방정부연구), 26(2), 119–145 · 2022 [in Korean]</span></span></li>
+        </ul>
+      </div>
+
+      <div class="pub-group">
+        <h3><span lang="ko">연구보고서</span><span lang="en">Research reports</span></h3>
+        <ul class="pubs">
+          <li><span class="t"><span lang="ko">전환사회에서의 지속가능성 확보를 위한 E.S.G. 제도 구축 연구</span><span lang="en">Building an ESG institutional framework for sustainability in a transitional society</span></span>
+            <span class="m"><span lang="ko">공동연구 · 경제·인문사회연구회 · 2023</span><span lang="en">Co-researcher · National Research Council for Economics, Humanities and Social Sciences (NRC) · 2023 [in Korean]</span></span></li>
+        </ul>
+      </div>
+
+      <div class="pub-group">
+        <h3><span lang="ko">진행 중인 연구</span><span lang="en">Work in progress</span></h3>
+        <ul class="pubs">
+          <li><span class="t">Relationship between ESG disclosure and ESG management performance: Exploring the washing phenomenon</span>
+            <span class="m"><span lang="ko">김준성, 한동숙 · 심사 중</span><span lang="en">Kim, J., &amp; Han, D. · under review</span></span></li>
+          <li><span class="t">Evaluation of the policy coherence of vocational training and employment linkage policies for young migrants: Expert perceptions on Korean diaspora youth policies in Korea</span>
+            <span class="m"><span lang="ko">김준성, 김민규 · 심사 중</span><span lang="en">Kim, J., &amp; Kim, M. · under review</span></span></li>
+          <li><span class="t"><span lang="ko">지방공공기관과 중앙 공공기관의 ESG 경영 수준 비교 분석: 클린아이와 알리오 공시 비교</span><span lang="en">Comparing ESG management levels of local and central public institutions: Evidence from CleanEye and ALIO disclosures</span></span>
+            <span class="m"><span lang="ko">김준성, 이주경 · 심사 중</span><span lang="en">Kim, J., &amp; Lee, J. · under review</span></span></li>
+          <li><span class="t"><span lang="ko">세종시 대중교통 정액권(이응패스)의 정책효과: 이중차분 분석</span><span lang="en">Effects of Sejong City's flat-rate transit pass: A difference-in-differences study</span></span>
+            <span class="m"><span lang="ko">박성훈, 김준성 · 투고 준비 중</span><span lang="en">Park, S., &amp; Kim, J. · in preparation</span></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2><span lang="ko">연구과제</span><span lang="en">Research Projects</span></h2>
+      <div class="pub-group">
+        <h3><span lang="ko">진행 중</span><span lang="en">Ongoing</span></h3>
+        <ul class="pubs">
+        <li><span class="t"><span lang="ko">ISC 대표기관 유형별 운영 현황 진단 및 지원방안 연구</span><span lang="en">Diagnosis of Industry Skills Council (ISC) representative organizations by type and support measures</span></span>
+          <span class="m"><span lang="ko">연구책임 · 한국직업능력연구원 기본연구 · 2026.7 – 2026.12</span><span lang="en">Principal investigator · KRIVET core research · 2026.7 – 2026.12</span></span></li>
+        <li><span class="t"><span lang="ko">데이터 기반의 노동시장 스킬셋 분석 연구</span><span lang="en">Data-driven skill-set analysis of the Korean labor market</span></span>
+          <span class="m"><span lang="ko">연구책임 · 한국직업능력연구원 · 2026.4 – 2026.12</span><span lang="en">Principal investigator · KRIVET · 2026.4 – 2026.12</span></span></li>
+        <li><span class="t"><span lang="ko">정규직 전환 지원 사업 효과성 제고 방안</span><span lang="en">Improving the effectiveness of the regular-employment conversion support program</span></span>
+          <span class="m"><span lang="ko">참여 · 한국직업능력연구원 · 2026.4 – 2026.10</span><span lang="en">Co-researcher · KRIVET · 2026.4 – 2026.10</span></span></li>
+        <li><span class="t"><span lang="ko">외국인 현지 훈련 활성화 및 국내산업 수요 연계 방안 연구</span><span lang="en">Linking overseas pre-departure training for foreign workers with domestic industry demand</span></span>
+          <span class="m"><span lang="ko">참여 · 한국직업능력연구원 · 2026.4 – 2026.10</span><span lang="en">Co-researcher · KRIVET · 2026.4 – 2026.10</span></span></li>
+        <li><span class="t"><span lang="ko">2026년도 산업구조변화대응 등 특화훈련 성과분석</span><span lang="en">Outcome analysis of specialized training for industrial restructuring</span></span>
+          <span class="m"><span lang="ko">참여 · 한국기술교육대학교 직업능력심사평가원 · 2026.4 – 2026.11</span><span lang="en">Co-researcher · Korea University of Technology and Education, Vocational Competency Evaluation Center · 2026.4 – 2026.11</span></span></li>
+        <li><span class="t"><span lang="ko">2025년도 RSC 성과평가 실시 및 2026년도 평가계획·지표 수립</span><span lang="en">Performance evaluation of Regional Skills Councils (RSCs) and design of the 2026 evaluation framework</span></span>
+          <span class="m"><span lang="ko">참여 · 고용노동부 · 2026.3 – 2026.12</span><span lang="en">Co-researcher · MOEL · 2026.3 – 2026.12</span></span></li>
+        <li><span class="t"><span lang="ko">실업자 직업훈련 성과지수 개발 및 타당성 분석 연구</span><span lang="en">Developing and validating a composite performance index for unemployed-worker vocational training</span></span>
+          <span class="m"><span lang="ko">참여 · 한국직업능력연구원 · 2026.1 – 2026.10</span><span lang="en">Co-researcher · KRIVET · 2026.1 – 2026.10</span></span></li>
+        <li><span class="t"><span lang="ko">미래사회 대비 지역인재개발 혁신 전략</span><span lang="en">Regional talent development strategies for the future society</span></span>
+          <span class="m"><span lang="ko">참여 · 한국직업능력연구원 · 2026.1 – 2026.12</span><span lang="en">Co-researcher · KRIVET · 2026.1 – 2026.12</span></span></li>
+        <li><span class="t"><span lang="ko">2026년 신산업·첨단산업 인력실태 조사 기획·분석 연구</span><span lang="en">Survey design and analysis of workforce conditions in new and advanced industries</span></span>
+          <span class="m"><span lang="ko">참여 · 한국산업기술진흥원 · 2026.1 – 2026.12</span><span lang="en">Co-researcher · Korea Institute for Advancement of Technology (KIAT) · 2026.1 – 2026.12</span></span></li>
+        <li><span class="t"><span lang="ko">2026년 지역 훈련수요조사</span><span lang="en">Regional training demand survey (2026)</span></span>
+          <span class="m"><span lang="ko">참여 · 경기지역인적자원개발위원회 · 2026.1 – 2026.11</span><span lang="en">Co-researcher · Gyeonggi Regional HRD Council · 2026.1 – 2026.11</span></span></li>
+        <li><span class="t"><span lang="ko">BEAR Phase III: Connecting Technologies (Ghana)</span><span lang="en">BEAR Phase III: Connecting Technologies (Ghana)</span></span>
+          <span class="m"><span lang="ko">참여 · UNESCO · 2025.6 – 2026.12</span><span lang="en">Co-researcher · UNESCO · 2025.6 – 2026.12</span></span></li>
+        </ul>
+      </div>
+      <div class="pub-group">
+        <h3><span lang="ko">완료</span><span lang="en">Completed</span></h3>
+        <ul class="pubs">
+        <li><span class="t"><span lang="ko">재외동포청년 직업교육훈련 필요 분야 및 직종 수요조사</span><span lang="en">Demand survey on vocational education and training fields for overseas Korean diaspora youth</span></span>
+          <span class="m"><span lang="ko">참여 · 재외동포청 · 2025.11 – 2026.2</span><span lang="en">Co-researcher · Overseas Koreans Agency · 2025.11 – 2026.2</span></span></li>
+        <li><span class="t"><span lang="ko">AI 기반 수요관리 선진사례 분석 및 활용 방안 마련</span><span lang="en">AI-based labor demand management: International cases and applications</span></span>
+          <span class="m"><span lang="ko">연구책임 · 고용노동부 · 2025.11 – 2026.1</span><span lang="en">Principal investigator · Ministry of Employment and Labor (MOEL) · 2025.11 – 2026.1</span></span></li>
+        <li><span class="t"><span lang="ko">국가기간·전략산업직종의 지역·산업 인력훈련 수요분석 및 훈련 개선방안 마련</span><span lang="en">Regional and industrial training demand analysis for national key and strategic industry occupations</span></span>
+          <span class="m"><span lang="ko">참여 · 고용노동부 · 2025.3 – 2025.12</span><span lang="en">Co-researcher · MOEL · 2025.3 – 2025.12</span></span></li>
+        <li><span class="t"><span lang="ko">성과계약형 자율훈련 설계 및 제도화 지원</span><span lang="en">Design and institutionalization of performance-contract-based autonomous training</span></span>
+          <span class="m"><span lang="ko">참여 · 고용노동부 · 2025.7 – 2025.12</span><span lang="en">Co-researcher · MOEL · 2025.7 – 2025.12</span></span></li>
+        <li><span class="t"><span lang="ko">2025년도 「산업구조변화대응 등 특화훈련」 운영총괄기관 사업 — 운영기관 모니터링·성과평가·환류체계 마련 및 성과확산 네트워킹</span><span lang="en">Managing organization for specialized training for industrial restructuring — monitoring, performance evaluation, feedback systems, and outcome-dissemination networking</span></span>
+          <span class="m"><span lang="ko">참여 · 고용노동부 · 2025.1 – 2025.12</span><span lang="en">Co-researcher · MOEL · 2025.1 – 2025.12</span></span></li>
+        <li><span class="t"><span lang="ko">지역·산업별 인적자원개발위원회 협업 강화 및 발전 지원</span><span lang="en">Strengthening collaboration among regional and sectoral HRD councils</span></span>
+          <span class="m"><span lang="ko">참여 · 고용노동부 · 2025.7 – 2025.11</span><span lang="en">Co-researcher · MOEL · 2025.7 – 2025.11</span></span></li>
+        <li><span class="t"><span lang="ko">2025년 지역 훈련수요조사</span><span lang="en">Regional training demand survey (2025)</span></span>
+          <span class="m"><span lang="ko">참여 · 충북지역인적자원개발위원회 · 2025.1 – 2025.11</span><span lang="en">Co-researcher · Chungbuk Regional HRD Council · 2025.1 – 2025.11</span></span></li>
+        <li><span class="t"><span lang="ko">산업구조변화대응 등 특화훈련 고도화 방안</span><span lang="en">Upgrading specialized training programs for industrial restructuring</span></span>
+          <span class="m"><span lang="ko">참여 · 고용노동부 · 2025.5 – 2025.10</span><span lang="en">Co-researcher · MOEL · 2025.5 – 2025.10</span></span></li>
+        <li><span class="t"><span lang="ko">직업능력개발 정책평가를 위한 실험적 방법론 적용 방안 연구</span><span lang="en">Applying experimental methods to the evaluation of vocational competency development policy</span></span>
+          <span class="m"><span lang="ko">연구책임 · 한국직업능력연구원 · 2025.6 – 2025.9</span><span lang="en">Principal investigator · KRIVET · 2025.6 – 2025.9</span></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="service">
+      <h2><span lang="ko">학술 활동</span><span lang="en">Academic Service</span></h2>
+      <p><span lang="ko">국내외 학술지 심사위원(<em>Journal of Asian Public Policy</em> 등)</span>
+         <span lang="en">Reviewer for Korean and international journals including the <em>Journal of Asian Public Policy</em></span></p>
+    </section>
+
+  </main>
+</div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 <span lang="ko">김준성</span><span lang="en">Junsung Kim</span></span>
+    <span><span lang="ko">최종 수정 2026-09</span><span lang="en">Last updated Sept 2026</span></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, key='site-lang';
+  function apply(l){
+    root.setAttribute('data-lang',l); root.setAttribute('lang',l);
+    document.querySelectorAll('[data-set-lang]').forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-set-lang')===l ? 'true':'false'); });
+    try{ localStorage.setItem(key,l); }catch(e){}
+  }
+  var saved=null; try{ saved=localStorage.getItem(key); }catch(e){}
+  if(saved==='en'||saved==='ko'){ apply(saved); }
+  document.querySelectorAll('[data-set-lang]').forEach(function(b){ b.addEventListener('click',function(){ apply(b.getAttribute('data-set-lang')); }); });
+})();
+</script>
+</body>
+</html>
